@@ -1,22 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Keith Gong: Personal site and portfolio</title>
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <nav>
-        <a href="./">Home</a>
-        <a href="projects/">Projects</a>
-        <a href="contact/">Contact</a>
-        <a href="resume/">Resume</a>
-        <a href="https://github.com/xibahbah" target="_blank" rel="noopener noreferrer">GitHub</a>
-    </nav>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
 
-    <h1>Keith Gong</h1>
-    <p>I am Keith Gong, and this is my personal site and portfolio.</p>
-    <img src="images/mclov.jpeg" alt="A photo of me" width="300">
+        h1, h2, h3, nav, .headline {
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-neutral-50 text-neutral-900">
+    <header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-neutral-200">
+        <nav class="max-w-7xl mx-auto px-8 h-20 flex items-center justify-between">
+            <div class="text-xl font-extrabold tracking-tight">
+                Keith Gong
+            </div>
+
+            <div class="hidden md:flex items-center gap-8 font-semibold">
+                <a class="text-blue-600 border-b-2 border-blue-600 pb-1" href="./">Home</a>
+                <a class="text-neutral-600 hover:text-neutral-900 transition-colors" href="projects/">Projects</a>
+                <a class="text-neutral-600 hover:text-neutral-900 transition-colors" href="contact/">Contact</a>
+                <a class="text-neutral-600 hover:text-neutral-900 transition-colors" href="resume/">Resume</a>
+                <a class="text-neutral-600 hover:text-neutral-900 transition-colors" href="https://github.com/xibahbah" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-32 pb-24 px-8">
+        <div class="max-w-7xl mx-auto">
+            <section class="flex flex-col items-center text-center space-y-10">
+                <div class="relative">
+                    <div class="h-48 w-48 rounded-full overflow-hidden border border-neutral-300 shadow-md">
+                        <img src="images/mclov.jpeg" alt="Keith Gong portrait" class="h-full w-full object-cover">
+                    </div>
+                </div>
+
+                <div class="max-w-3xl space-y-6">
+                    <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight leading-tight">
+                        Keith Gong
+                    </h1>
+                    <p class="text-lg md:text-2xl text-neutral-600 leading-relaxed max-w-2xl mx-auto">
+                        Welcome to my personal site and portfolio. This website introduces who I am, shows my projects, shares my resume, and gives a way to contact me.
+                    </p>
+                </div>
+
+                <div class="flex flex-col md:flex-row gap-4 items-center">
+                    <a href="projects/" class="px-8 py-4 bg-neutral-900 text-white rounded-md font-medium hover:bg-neutral-700 transition">
+                        View Projects
+                    </a>
+                    <a href="resume/" class="px-8 py-4 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-500 transition">
+                        View Resume
+                    </a>
+                </div>
+            </section>
+
+            <section class="mt-28 grid grid-cols-1 md:grid-cols-12 gap-6">
+                <div class="md:col-span-8 bg-white rounded-2xl p-10 shadow-sm border border-neutral-200 flex flex-col justify-between min-h-[320px]">
+                    <div>
+                        <span class="text-blue-600 text-xs uppercase tracking-[0.2em] mb-4 block font-semibold">
+                            About This Site
+                        </span>
+                        <h2 class="text-3xl md:text-4xl font-bold max-w-xl">
+                            A clean personal portfolio built with HTML and CSS.
+                        </h2>
+                    </div>
+                    <p class="text-neutral-600 max-w-md text-sm leading-relaxed mt-6">
+                        This site contains a homepage, projects page, contact page, and resume page. It is designed to be simple, readable, and easy to navigate.
+                    </p>
+                </div>
+
+                <div class="md:col-span-4 bg-white rounded-2xl p-8 shadow-sm border border-neutral-200 flex flex-col gap-6">
+                    <div class="h-32 bg-neutral-100 rounded-xl flex items-center justify-center text-neutral-500 text-lg font-semibold">
+                        GitHub
+                    </div>
+                    <div class="space-y-2">
+                        <h3 class="text-xl font-bold">My GitHub</h3>
+                        <p class="text-sm text-neutral-600 leading-relaxed">
+                            Visit my GitHub profile to see more of my work and repositories.
+                        </p>
+                        <a href="https://github.com/xibahbah" target="_blank" rel="noopener noreferrer" class="inline-block text-blue-600 font-medium hover:underline">
+                            github.com/xibahbah
+                        </a>
+                    </div>
+                </div>
+
+                <div class="md:col-span-4 bg-white rounded-2xl p-8 shadow-sm border border-neutral-200 text-center">
+                    <div class="text-3xl font-extrabold text-blue-600">4</div>
+                    <p class="text-xs uppercase tracking-widest text-neutral-500 mt-2">Main Pages</p>
+                </div>
+
+                <a href="resume/" class="md:col-span-4 bg-neutral-900 rounded-2xl p-8 flex items-center justify-between text-white shadow-sm hover:bg-neutral-800 transition">
+                    <span class="font-bold text-xl">Resume</span>
+                    <span class="text-lg">→</span>
+                </a>
+
+                <a href="contact/" class="md:col-span-4 bg-blue-600 rounded-2xl p-8 flex flex-col justify-center items-center text-white shadow-sm hover:bg-blue-500 transition">
+                    <span class="text-2xl mb-2">✉</span>
+                    <span class="font-bold">Contact Me</span>
+                </a>
+            </section>
+        </div>
+    </main>
+
+    <footer class="w-full py-12 border-t border-neutral-200 bg-white">
+        <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-6 text-sm uppercase tracking-widest text-neutral-500">
+            <div>
+                © 2026 Keith Gong
+            </div>
+            <div class="flex gap-8">
+                <a href="./" class="hover:text-blue-600 transition-colors">Home</a>
+                <a href="projects/" class="hover:text-blue-600 transition-colors">Projects</a>
+                <a href="contact/" class="hover:text-blue-600 transition-colors">Contact</a>
+                <a href="resume/" class="hover:text-blue-600 transition-colors">Resume</a>
+                <a href="https://github.com/xibahbah" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors">GitHub</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
