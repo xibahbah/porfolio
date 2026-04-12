@@ -3,40 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Contact – Keith Gong</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
     <nav>
         <a href="../">Home</a>
         <a href="../projects/">Projects</a>
-        <a href="../contact/">Contact</a>
+        <a href="../contact/" class="current">Contact</a>
         <a href="../resume/">Resume</a>
         <a href="https://github.com/xibahbah" target="_blank" rel="noopener noreferrer">GitHub</a>
     </nav>
 
-    <h1>Contact</h1>
+    <h1>Contact me</h1>
 
     <form action="mailto:xikeith0901@gmail.com" method="POST" enctype="text/plain">
         <label>
             Email:
-            <input name="email" type="email">
+            <input name="email" type="email" placeholder="your@email.com">
         </label>
-        <br><br>
 
         <label>
             Subject:
-            <input name="subject">
+            <input name="subject" placeholder="Hello!">
         </label>
-        <br><br>
 
         <label>
             Message:
-            <textarea name="body"></textarea>
+            <textarea name="body" rows="5" placeholder="Your message here…"></textarea>
         </label>
-        <br><br>
 
-        <button>Send</button>
+        <button type="submit">Send</button>
     </form>
 </body>
 </html>
