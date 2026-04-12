@@ -6,7 +6,7 @@
     <title>Projects – Keith Gong</title>
     <link rel="stylesheet" href="../style.css">
     <style>
-        /* ===== Page header ===== */
+        
         .page-header {
             padding-block: 2em 1em;
             border-bottom: 1px solid oklch(87% 0% 0);
@@ -23,13 +23,11 @@
             font-size: 1.05em;
         }
 
-        /* ===== Projects grid override ===== */
         .projects {
             grid-template-columns: repeat(auto-fill, minmax(22em, 1fr));
             gap: 1.5em;
         }
 
-        /* ===== Project card ===== */
         .projects article {
             background: white;
             border: 1px solid oklch(88% 0% 0);
@@ -47,14 +45,11 @@
             transform: translateY(-4px);
             box-shadow: 0 12px 32px oklch(0% 0% 0 / 10%);
         }
-
-        /* Colored top accent bar per card */
         .projects article:nth-child(1) { border-top: 4px solid oklch(65% 50% 0); }
         .projects article:nth-child(2) { border-top: 4px solid oklch(60% 40% 145); }
         .projects article:nth-child(3) { border-top: 4px solid oklch(58% 45% 260); }
         .projects article:nth-child(4) { border-top: 4px solid oklch(62% 42% 25); }
 
-        /* ===== Image area ===== */
         .projects article .img-wrap {
             background: oklch(96% 0% 0);
             display: flex;
@@ -70,7 +65,6 @@
             opacity: 0.35;
         }
 
-        /* ===== Card body ===== */
         .projects article .card-body {
             padding: 1.4em 1.5em 1.6em;
             display: flex;
@@ -111,7 +105,6 @@
         .projects article:nth-child(3) .tag { background: oklch(93% 12% 260); color: oklch(36% 38% 260); }
         .projects article:nth-child(4) .tag { background: oklch(94% 12% 25); color: oklch(36% 38% 25); }
 
-        /* ===== Footer ===== */
         footer {
             margin-top: 3em;
             padding-block: 1.25em;
