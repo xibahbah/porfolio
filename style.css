@@ -5,6 +5,7 @@
 
 html {
     accent-color: var(--color-accent);
+    color-scheme: light dark;
 }
 
 /* ===== Body — Step 1: Prevent content from getting too wide ===== */
@@ -37,7 +38,8 @@ nav li {
 nav {
     display: flex;
     margin-bottom: 1em;
-    border-bottom: 1px solid oklch(80% 3% 200);
+    --border-color: oklch(50% 10% 200 / 40%);
+    border-bottom: 1px solid var(--border-color);
 }
 
 /* Step 2.3: Link style */
@@ -51,7 +53,7 @@ nav a {
 
 /* Current page indicator */
 nav a.current {
-    border-bottom: 0.4em solid oklch(80% 3% 200);
+    border-bottom: 0.4em solid var(--border-color);
     padding-bottom: 0.1em;
     font-weight: bold;
 }
@@ -60,7 +62,7 @@ nav a.current {
 nav a:hover {
     border-bottom: 0.4em solid var(--color-accent);
     padding-bottom: 0.1em;
-    background-color: oklch(from var(--color-accent) 95% 5% h);
+    background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
 }
 
 /* ===== Images ===== */
@@ -70,12 +72,27 @@ img {
     margin-top: 0;
 }
 
+/* ===== Dark Mode Switcher ===== */
+.color-scheme {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 80%;
+    font-family: inherit;
+}
+
+.color-scheme select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
 /* ===== Contact Form — Step 3 ===== */
 
 /* Step 3.1: Inherit page typography */
 form input,
 form textarea,
-form button {
+form button,
+form select {
     font: inherit;
     box-sizing: border-box;
     width: 100%;
