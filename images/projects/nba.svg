@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a0a00"/>
+      <stop offset="100%" stop-color="#2d1500"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <!-- Court -->
+  <rect x="80" y="80" width="360" height="300" rx="8" fill="#a0522d" stroke="#c8a060" stroke-width="2" opacity="0.8"/>
+  <!-- Court markings -->
+  <rect x="80" y="80" width="360" height="300" rx="8" fill="none" stroke="#c8a060" stroke-width="2"/>
+  <line x1="260" y1="80" x2="260" y2="380" stroke="#c8a060" stroke-width="1.5" opacity="0.7"/>
+  <circle cx="260" cy="230" r="50" fill="none" stroke="#c8a060" stroke-width="1.5" opacity="0.7"/>
+  <!-- Key/paint areas -->
+  <rect x="80" y="155" width="90" height="150" rx="4" fill="none" stroke="#c8a060" stroke-width="1.5" opacity="0.6"/>
+  <rect x="350" y="155" width="90" height="150" rx="4" fill="none" stroke="#c8a060" stroke-width="1.5" opacity="0.6"/>
+  <!-- Basket circles -->
+  <circle cx="97" cy="230" r="16" fill="none" stroke="#c8a060" stroke-width="2"/>
+  <circle cx="423" cy="230" r="16" fill="none" stroke="#c8a060" stroke-width="2"/>
+  <!-- Shot chart dots -->
+  <circle cx="140" cy="200" r="6" fill="#4caf50" opacity="0.9"/>
+  <circle cx="200" cy="170" r="6" fill="#4caf50" opacity="0.9"/>
+  <circle cx="170" cy="260" r="6" fill="#f44336" opacity="0.9"/>
+  <circle cx="230" cy="140" r="6" fill="#4caf50" opacity="0.9"/>
+  <circle cx="240" cy="300" r="6" fill="#f44336" opacity="0.9"/>
+  <circle cx="310" cy="180" r="6" fill="#4caf50" opacity="0.9"/>
+  <circle cx="290" cy="250" r="6" fill="#4caf50" opacity="0.9"/>
+  <circle cx="350" cy="210" r="6" fill="#f44336" opacity="0.9"/>
+  <circle cx="130" cy="320" r="6" fill="#4caf50" opacity="0.9"/>
+  <circle cx="380" cy="270" r="6" fill="#4caf50" opacity="0.9"/>
+  <!-- Player stat cards on right -->
+  <rect x="475" y="80" width="250" height="90" rx="10" fill="#1a1a1a" stroke="#ff6d00" stroke-width="1.5" opacity="0.95"/>
+  <text x="495" y="107" font-family="system-ui" font-size="13" font-weight="bold" fill="white">LeBron James</text>
+  <text x="495" y="125" font-family="system-ui" font-size="11" fill="#ff9e40">PTS 27.2  REB 7.3  AST 8.1</text>
+  <text x="495" y="142" font-family="system-ui" font-size="11" fill="#aaa">eFG% 56.4  PER 24.8</text>
+  <text x="680" y="107" text-anchor="end" font-family="system-ui" font-size="12" fill="#ffcc02">★ All-Star</text>
+  <rect x="475" y="185" width="250" height="90" rx="10" fill="#1a1a1a" stroke="#1565c0" stroke-width="1.5" opacity="0.95"/>
+  <text x="495" y="212" font-family="system-ui" font-size="13" font-weight="bold" fill="white">Steph Curry</text>
+  <text x="495" y="230" font-family="system-ui" font-size="11" fill="#64b5f6">PTS 29.4  3P% 42.8  AST 6.3</text>
+  <text x="495" y="248" font-family="system-ui" font-size="11" fill="#aaa">eFG% 63.2  PER 28.1</text>
+  <text x="680" y="212" text-anchor="end" font-family="system-ui" font-size="12" fill="#ffcc02">★ MVP</text>
+  <!-- Efficiency bar chart -->
+  <rect x="475" y="295" width="250" height="80" rx="10" fill="#111" opacity="0.9"/>
+  <text x="600" y="316" text-anchor="middle" font-family="system-ui" font-size="12" fill="#aaa">Player Efficiency Rating</text>
+  <rect x="490" y="325" width="160" height="10" rx="4" fill="#333"/>
+  <rect x="490" y="325" width="140" height="10" rx="4" fill="#ff6d00" opacity="0.9"/>
+  <text x="638" y="334" font-family="system-ui" font-size="10" fill="#ff9e40">24.8</text>
+  <rect x="490" y="345" width="160" height="10" rx="4" fill="#333"/>
+  <rect x="490" y="345" width="152" height="10" rx="4" fill="#1565c0" opacity="0.9"/>
+  <text x="650" y="354" font-family="system-ui" font-size="10" fill="#64b5f6">28.1</text>
+  <text x="400" y="420" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#ff6d0040">NBA Stats · 10 Seasons · Scraped Data · PER</text>
+</svg>

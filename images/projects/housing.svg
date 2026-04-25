@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <!-- Grid lines -->
+  <line x1="80" y1="50" x2="80" y2="340" stroke="#ffffff18" stroke-width="1"/>
+  <line x1="80" y1="340" x2="720" y2="340" stroke="#ffffff18" stroke-width="1"/>
+  <line x1="80" y1="230" x2="720" y2="230" stroke="#ffffff10" stroke-width="1" stroke-dasharray="6,4"/>
+  <line x1="80" y1="120" x2="720" y2="120" stroke="#ffffff10" stroke-width="1" stroke-dasharray="6,4"/>
+  <!-- Bar chart -->
+  <rect x="120" y="260" width="60" height="80" rx="4" fill="#e07b39" opacity="0.85"/>
+  <rect x="210" y="220" width="60" height="120" rx="4" fill="#e07b39" opacity="0.85"/>
+  <rect x="300" y="190" width="60" height="150" rx="4" fill="#e07b39" opacity="0.85"/>
+  <rect x="390" y="155" width="60" height="185" rx="4" fill="#e8953a" opacity="0.9"/>
+  <rect x="480" y="130" width="60" height="210" rx="4" fill="#f0a93b" opacity="0.9"/>
+  <rect x="570" y="100" width="60" height="240" rx="4" fill="#f5c842" opacity="0.95"/>
+  <!-- Trend line -->
+  <polyline points="150,250 240,210 330,182 420,148 510,122 600,94" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+  <!-- Dots on trend line -->
+  <circle cx="150" cy="250" r="5" fill="white" opacity="0.9"/>
+  <circle cx="240" cy="210" r="5" fill="white" opacity="0.9"/>
+  <circle cx="330" cy="182" r="5" fill="white" opacity="0.9"/>
+  <circle cx="420" cy="148" r="5" fill="white" opacity="0.9"/>
+  <circle cx="510" cy="122" r="5" fill="white" opacity="0.9"/>
+  <circle cx="600" cy="94" r="5" fill="white" opacity="0.9"/>
+  <!-- House icon top right -->
+  <g transform="translate(630,50)" opacity="0.5">
+    <polygon points="50,10 90,40 90,80 10,80 10,40" fill="none" stroke="#f5c842" stroke-width="3"/>
+    <polygon points="50,10 10,40 90,40" fill="none" stroke="#f5c842" stroke-width="3"/>
+    <rect x="35" y="55" width="30" height="25" fill="none" stroke="#f5c842" stroke-width="2.5"/>
+  </g>
+  <!-- Label -->
+  <text x="400" y="400" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#ffffff80">San Diego Housing · scikit-learn · 87% accuracy</text>
+</svg>

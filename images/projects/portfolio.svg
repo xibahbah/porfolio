@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a1a1a"/>
+      <stop offset="100%" stop-color="#2d2d2d"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <!-- Browser window -->
+  <rect x="100" y="60" width="600" height="340" rx="10" fill="#1e1e1e" stroke="#444" stroke-width="1.5"/>
+  <!-- Title bar -->
+  <rect x="100" y="60" width="600" height="36" rx="10" fill="#2d2d2d"/>
+  <rect x="100" y="84" width="600" height="12" fill="#2d2d2d"/>
+  <circle cx="128" cy="78" r="7" fill="#ff5f56"/>
+  <circle cx="152" cy="78" r="7" fill="#ffbd2e"/>
+  <circle cx="176" cy="78" r="7" fill="#27c93f"/>
+  <!-- URL bar -->
+  <rect x="200" y="68" width="350" height="20" rx="10" fill="#3a3a3a"/>
+  <text x="375" y="82" text-anchor="middle" font-family="monospace" font-size="11" fill="#888">keithgong.dev/portfolio</text>
+  <!-- Code content -->
+  <text x="130" y="128" font-family="monospace" font-size="13" fill="#569cd6">&lt;nav&gt;</text>
+  <text x="150" y="148" font-family="monospace" font-size="13" fill="#ce9178">  Home · Projects · Contact</text>
+  <text x="130" y="168" font-family="monospace" font-size="13" fill="#569cd6">&lt;/nav&gt;</text>
+  <text x="130" y="196" font-family="monospace" font-size="13" fill="#569cd6">&lt;h1&gt;</text>
+  <text x="150" y="216" font-family="monospace" font-size="13" fill="#dcdcaa">Keith Gong</text>
+  <text x="130" y="236" font-family="monospace" font-size="13" fill="#569cd6">&lt;/h1&gt;</text>
+  <text x="130" y="264" font-family="monospace" font-size="13" fill="#6a9955">// dark mode · GitHub API</text>
+  <text x="130" y="284" font-family="monospace" font-size="13" fill="#6a9955">// dynamic projects · ES modules</text>
+  <!-- Mini preview panels on right -->
+  <rect x="440" y="108" width="230" height="110" rx="6" fill="#252526" stroke="#3c3c3c" stroke-width="1"/>
+  <rect x="440" y="108" width="230" height="22" rx="6" fill="#3c3c3c"/>
+  <rect x="440" y="118" width="230" height="10" fill="#3c3c3c"/>
+  <text x="555" y="123" text-anchor="middle" font-family="system-ui" font-size="10" fill="#888">style.css</text>
+  <text x="455" y="148" font-family="monospace" font-size="10" fill="#c586c0">:root {</text>
+  <text x="465" y="163" font-family="monospace" font-size="10" fill="#9cdcfe">  --color-accent:</text>
+  <text x="465" y="178" font-family="monospace" font-size="10" fill="#ce9178">    oklch(65% 50% 0);</text>
+  <text x="455" y="193" font-family="monospace" font-size="10" fill="#c586c0">}</text>
+  <!-- Cursor blink -->
+  <rect x="130" y="310" width="2" height="16" fill="#aeafad" opacity="0.9"/>
+  <text x="400" y="420" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#ffffff50">HTML · CSS · Vanilla JS · GitHub Pages</text>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d1b2a"/>
+      <stop offset="100%" stop-color="#1b2838"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#4fc3f7" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#4fc3f7" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <!-- US map outline (simplified) -->
+  <path d="M150,180 L200,160 L260,155 L340,165 L420,160 L500,170 L560,180 L600,200 L620,230 L590,270 L540,290 L460,285 L380,280 L300,275 L220,265 L170,250 Z" fill="#1e3a5f" stroke="#4fc3f7" stroke-width="1.5" opacity="0.7"/>
+  <!-- Choropleth county blobs -->
+  <circle cx="280" cy="220" r="28" fill="#4fc3f7" opacity="0.15"/>
+  <circle cx="280" cy="220" r="18" fill="#4fc3f7" opacity="0.25"/>
+  <circle cx="450" cy="210" r="35" fill="#4fc3f7" opacity="0.2"/>
+  <circle cx="450" cy="210" r="22" fill="#4fc3f7" opacity="0.35"/>
+  <circle cx="520" cy="235" r="22" fill="#81d4fa" opacity="0.3"/>
+  <circle cx="380" cy="235" r="18" fill="#4fc3f7" opacity="0.2"/>
+  <circle cx="200" cy="230" r="16" fill="#b3e5fc" opacity="0.25"/>
+  <circle cx="350" cy="215" r="14" fill="#4fc3f7" opacity="0.3"/>
+  <!-- High-density dot (NYC) -->
+  <circle cx="575" cy="195" r="10" fill="#f06292" opacity="0.9"/>
+  <circle cx="575" cy="195" r="20" fill="#f06292" opacity="0.2"/>
+  <circle cx="460" cy="220" r="8" fill="#ba68c8" opacity="0.8"/>
+  <circle cx="290" cy="215" r="7" fill="#4fc3f7" opacity="0.9"/>
+  <!-- Time series chart bottom -->
+  <rect x="80" y="320" width="640" height="80" rx="8" fill="#0a1628" opacity="0.7"/>
+  <polyline points="100,380 160,370 220,355 280,340 340,345 400,330 460,315 520,328 580,335 640,342 700,338" fill="none" stroke="#4fc3f7" stroke-width="2.5" stroke-linejoin="round"/>
+  <polyline points="100,380 160,370 220,355 280,340 340,345 400,330 460,315 520,328 580,335 640,342 700,338" fill="none" stroke="#4fc3f7" stroke-width="8" opacity="0.1"/>
+  <!-- Medical cross -->
+  <g transform="translate(680,60)" opacity="0.5">
+    <rect x="22" y="10" width="16" height="40" rx="3" fill="#f06292"/>
+    <rect x="10" y="22" width="40" height="16" rx="3" fill="#f06292"/>
+  </g>
+  <text x="400" y="420" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#ffffff60">COVID-19 Vaccination Dashboard · D3.js · CDC Data</text>
+</svg>
