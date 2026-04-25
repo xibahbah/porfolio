@@ -74,9 +74,7 @@ img {
 
 /* ===== Dark Mode Switcher ===== */
 .color-scheme {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
+    margin-left: auto;
     font-size: 80%;
     font-family: inherit;
 }

@@ -45,7 +45,7 @@ for (let p of pages) {
 
 // ── Step 4: Dark mode ─────────────────────────────────────────────────────────
 
-document.body.insertAdjacentHTML('afterbegin', `
+nav.insertAdjacentHTML('beforeend', `
 <label class="color-scheme">
   Theme:
   <select>
