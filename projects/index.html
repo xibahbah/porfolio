@@ -47,65 +47,34 @@
             transform: translateY(-4px);
             box-shadow: 0 12px 32px oklch(0% 0% 0 / 10%);
         }
-        .projects article:nth-child(1) { border-top: 4px solid oklch(65% 50% 0); }
-        .projects article:nth-child(2) { border-top: 4px solid oklch(60% 40% 145); }
-        .projects article:nth-child(3) { border-top: 4px solid oklch(58% 45% 260); }
-        .projects article:nth-child(4) { border-top: 4px solid oklch(62% 42% 25); }
+        .projects article:nth-child(4n+1) { border-top: 4px solid oklch(65% 50% 0); }
+        .projects article:nth-child(4n+2) { border-top: 4px solid oklch(60% 40% 145); }
+        .projects article:nth-child(4n+3) { border-top: 4px solid oklch(58% 45% 260); }
+        .projects article:nth-child(4n+4) { border-top: 4px solid oklch(62% 42% 25); }
 
-        .projects article .img-wrap {
-            background: oklch(96% 0% 0);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 2em;
-            border-bottom: 1px solid oklch(91% 0% 0);
-        }
-
-        .projects article .img-wrap img {
-            width: 80px;
-            height: 80px;
-            opacity: 0.35;
-        }
-
-        .projects article .card-body {
-            padding: 1.4em 1.5em 1.6em;
-            display: flex;
-            flex-direction: column;
-            gap: 0.6em;
-            flex: 1;
+        .projects article img {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            display: block;
         }
 
         .projects article h2 {
             margin: 0;
-            font-size: 1.1em;
+            font-size: 1.05em;
+            font-weight: 700;
             line-height: 1.3;
+            padding: 1em 1.2em 0.5em;
         }
 
         .projects article p {
             margin: 0;
-            font-size: 0.9em;
+            font-size: 0.88em;
             color: oklch(42% 0% 0);
             line-height: 1.6;
+            padding: 0 1.2em 1.2em;
             flex: 1;
         }
-
-        .projects article .tag {
-            display: inline-block;
-            font-size: 0.72em;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            padding: 0.25em 0.7em;
-            border-radius: 2em;
-            background: oklch(94% 0% 0);
-            color: oklch(40% 0% 0);
-            align-self: flex-start;
-        }
-
-        .projects article:nth-child(1) .tag { background: oklch(94% 15% 0); color: oklch(38% 40% 0); }
-        .projects article:nth-child(2) .tag { background: oklch(93% 12% 145); color: oklch(36% 35% 145); }
-        .projects article:nth-child(3) .tag { background: oklch(93% 12% 260); color: oklch(36% 38% 260); }
-        .projects article:nth-child(4) .tag { background: oklch(94% 12% 25); color: oklch(36% 38% 25); }
 
         footer {
             margin-top: 3em;
