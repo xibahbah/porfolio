@@ -171,8 +171,10 @@ form button {
 }
 
 #projects-pie-plot {
-    width: min(20em, 100%);
-    max-width: 20em;
+    flex: 0 0 14em;
+    width: 14em;
+    height: 14em;
+    max-width: 100%;
     margin-block: 2em;
     overflow: visible;
 }
@@ -239,6 +241,9 @@ form button {
 
     #projects-pie-plot {
         align-self: center;
+        flex-basis: auto;
+        width: min(14em, 100%);
+        height: auto;
         margin-block: 1em;
     }
 }
