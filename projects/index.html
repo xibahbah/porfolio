@@ -26,7 +26,7 @@
         }
 
         .projects {
-            grid-template-columns: repeat(auto-fill, minmax(22em, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(min(22em, 100%), 1fr));
             gap: 1.5em;
         }
 
@@ -67,13 +67,16 @@
             padding: 1em 1.2em 0.5em;
         }
 
+        .projects article .project-meta {
+            padding: 0 1.2em 1.2em;
+            flex: 1;
+        }
+
         .projects article p {
             margin: 0;
             font-size: 0.88em;
             color: oklch(42% 0% 0);
             line-height: 1.6;
-            padding: 0 1.2em 1.2em;
-            flex: 1;
         }
 
         footer {
@@ -91,6 +94,18 @@
         <h1 class="projects-title">My Projects</h1>
         <p>A curated selection of my most impactful work.</p>
     </div>
+
+    <div class="chart-container" aria-label="Projects by year">
+        <svg id="projects-pie-plot" viewBox="-50 -50 100 100"></svg>
+        <ul class="legend"></ul>
+    </div>
+
+    <input
+        class="searchBar"
+        type="search"
+        aria-label="Search projects"
+        placeholder="Search projects..."
+    >
 
     <div class="projects"></div>
 
