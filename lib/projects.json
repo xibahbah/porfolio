@@ -1,5 +1,12 @@
 [
   {
+    "title": "Bikewatching Boston",
+    "year": "2026",
+    "image": "images/projects/bikewatching.png",
+    "url": "https://xibahbah.github.io/d3/",
+    "description": "Built an interactive geospatial visualization of Boston and Cambridge Bluebike traffic. The map combines bike-lane GeoJSON layers, station markers sized by trip volume, directional flow coloring, hover tooltips, and time-of-day filtering."
+  },
+  {
     "title": "San Diego Housing Price Predictor",
     "year": "2025",
     "image": "images/projects/housing.svg",
