@@ -555,13 +555,6 @@ dl.info[hidden]:not(:hover, :focus-within) {
     opacity: 0.8;
 }
 
-.lab-note {
-    padding: 1.25em;
-    border: 1px solid oklch(87% 0% 0);
-    border-radius: 0.75em;
-    background: color-mix(in oklch, canvas, var(--color-accent) 5%);
-}
-
 @media (max-width: 55em) {
     #scrolly-1,
     #files,
