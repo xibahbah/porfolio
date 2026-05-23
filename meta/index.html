@@ -19,11 +19,36 @@
         <div id="stats"></div>
     </section>
 
+    <section class="time-filter">
+        <label for="commit-progress">
+            Show commits until:
+            <time id="commit-time"></time>
+        </label>
+        <input type="range" id="commit-progress" min="0" max="100" value="100">
+    </section>
+
     <section>
         <h2>Commits by Time of Day</h2>
-        <p id="selection-count">No commits selected</p>
-        <div id="chart"></div>
-        <dl id="language-breakdown" class="stats"></dl>
+        <p>Scroll through the commit story to watch the scatter plot build over time. The slider above controls the same cutoff manually.</p>
+        <div id="scrolly-1">
+            <div id="scatter-story"></div>
+            <div id="scatter-plot">
+                <p id="selection-count">No commits selected</p>
+                <div id="chart"></div>
+                <dl id="language-breakdown" class="stats"></dl>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>The Race for the Biggest File</h2>
+        <p>Each dot below is one line of code. Files are sorted by size, and colors show the technology used for each line.</p>
+        <dl id="files"></dl>
+    </section>
+
+    <section class="lab-note">
+        <h2>Interesting Thing I Learned</h2>
+        <p>Small implementation details make animation feel much clearer: giving each commit circle a stable key keeps dots from jumping around, and the same filtered data can drive both the scrollytelling scatter plot and the file-size unit visualization.</p>
     </section>
 
     <dl id="commit-tooltip" class="info tooltip" hidden>
@@ -34,7 +59,7 @@
         <dd id="commit-date"></dd>
 
         <dt>Time</dt>
-        <dd id="commit-time"></dd>
+        <dd id="commit-tooltip-time"></dd>
 
         <dt>Author</dt>
         <dd id="commit-author"></dd>

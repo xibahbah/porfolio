@@ -359,6 +359,13 @@ dl.info dd {
     transform-box: fill-box;
 }
 
+@starting-style {
+    #chart circle {
+        r: 0;
+        opacity: 0;
+    }
+}
+
 #chart circle:hover {
     transform: scale(1.5);
 }
@@ -413,6 +420,168 @@ dl.info[hidden]:not(:hover, :focus-within) {
 
 #selection-count {
     font-weight: 700;
+}
+
+/* ===== Meta Analysis — Lab 8 ===== */
+.time-filter {
+    display: grid;
+    gap: 0.75em;
+    padding: 1em;
+    border: 1px solid oklch(87% 0% 0);
+    border-radius: 0.75em;
+    background: color-mix(in oklch, canvas, var(--color-accent) 4%);
+}
+
+.time-filter label {
+    display: flex;
+    align-items: baseline;
+    gap: 1em;
+    font-weight: 700;
+}
+
+.time-filter time {
+    margin-left: auto;
+    color: oklch(45% 0% 0);
+    font-variant-numeric: tabular-nums;
+    font-weight: 500;
+}
+
+#commit-progress {
+    width: 100%;
+}
+
+#scrolly-1 {
+    display: grid;
+    grid-template-columns: minmax(16rem, 0.8fr) minmax(0, 1.4fr);
+    gap: 2em;
+    align-items: start;
+    margin-block: 2em;
+}
+
+#scatter-story {
+    display: grid;
+    gap: 1.5em;
+}
+
+#scatter-plot {
+    position: sticky;
+    top: 1em;
+    align-self: start;
+    padding: 1em;
+    border: 1px solid oklch(87% 0% 0);
+    border-radius: 0.75em;
+    background: canvas;
+}
+
+.step {
+    min-height: 48vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1.15em;
+    border-left: 0.35em solid oklch(80% 0% 0);
+    border-radius: 0 0.75em 0.75em 0;
+    background: color-mix(in oklch, canvas, var(--color-accent) 3%);
+    color: color-mix(in oklch, canvastext, canvas 30%);
+    opacity: 0.82;
+    transition: 250ms ease;
+}
+
+.step.is-active {
+    border-left-color: var(--color-accent);
+    color: canvastext;
+    opacity: 1;
+    transform: translateX(0.25em);
+}
+
+.step p {
+    margin: 0.4em 0;
+}
+
+.step-kicker {
+    color: var(--color-accent);
+    font-size: 0.8em;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+#files {
+    display: grid;
+    grid-template-columns: minmax(14rem, 22rem) minmax(0, 1fr);
+    gap: 0.35em 1.25em;
+    margin-block: 1.5em;
+}
+
+#files > div {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: subgrid;
+    padding-block: 0.7em;
+    border-top: 1px solid oklch(87% 0% 0);
+}
+
+#files dt {
+    grid-column: 1;
+}
+
+#files code {
+    overflow-wrap: anywhere;
+}
+
+#files small {
+    display: block;
+    margin-top: 0.25em;
+    color: oklch(50% 0% 0);
+    font-size: 0.8em;
+}
+
+#files dd {
+    grid-column: 2;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    align-content: start;
+    gap: 0.18em;
+    margin: 0;
+}
+
+.loc {
+    flex: 0 0 auto;
+    width: 0.55em;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: var(--color, steelblue);
+    opacity: 0.8;
+}
+
+.lab-note {
+    padding: 1.25em;
+    border: 1px solid oklch(87% 0% 0);
+    border-radius: 0.75em;
+    background: color-mix(in oklch, canvas, var(--color-accent) 5%);
+}
+
+@media (max-width: 55em) {
+    #scrolly-1,
+    #files,
+    #files > div {
+        display: block;
+    }
+
+    #scatter-plot {
+        position: static;
+        margin-top: 1.5em;
+    }
+
+    .step {
+        min-height: auto;
+        margin-block: 1em;
+    }
+
+    #files dd {
+        margin-top: 0.5em;
+    }
 }
 
 /* ===== Resume/CV — Step 5 ===== */
