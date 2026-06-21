@@ -140,7 +140,7 @@ main,
 
 .hero-section {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(300px, 390px);
+    grid-template-columns: minmax(0, 1fr) minmax(240px, 300px);
     gap: clamp(2.4rem, 6vw, 5.5rem);
     align-items: center;
     min-height: min(700px, calc(100svh - 150px));
@@ -201,17 +201,9 @@ main,
 
 .hero-portrait {
     position: relative;
-    isolation: isolate;
+    justify-self: end;
+    width: min(100%, 300px);
     margin: 0;
-}
-
-.hero-portrait::before {
-    content: "";
-    position: absolute;
-    inset: 20px -18px -18px 22px;
-    z-index: -1;
-    border-radius: 8px;
-    background: #111113;
 }
 
 .hero-portrait img {
@@ -220,21 +212,7 @@ main,
     object-fit: cover;
     border: 1px solid rgb(17 17 19 / 14%);
     border-radius: 8px;
-    box-shadow: var(--shadow);
-}
-
-.hero-portrait figcaption {
-    position: absolute;
-    right: 0.85rem;
-    bottom: 0.85rem;
-    max-width: 16rem;
-    padding: 0.6rem 0.75rem;
-    border: 1px solid rgb(255 255 255 / 34%);
-    border-radius: 8px;
-    color: white;
-    background: rgb(17 17 19 / 76%);
-    font-size: 0.84rem;
-    backdrop-filter: blur(12px);
+    box-shadow: 0 20px 54px rgb(17 17 19 / 12%);
 }
 
 .signal-strip {
@@ -670,7 +648,8 @@ form button {
     }
 
     .hero-portrait {
-        max-width: 500px;
+        justify-self: start;
+        max-width: 320px;
     }
 
     .signal-strip {
@@ -728,19 +707,6 @@ form button {
 
     .button {
         width: 100%;
-    }
-
-    .hero-portrait::before {
-        inset: 14px -10px -10px 14px;
-    }
-
-    .hero-portrait figcaption {
-        position: static;
-        margin-top: 0.6rem;
-        color: var(--muted);
-        background: transparent;
-        border-color: rgb(17 17 19 / 12%);
-        backdrop-filter: none;
     }
 
     .signal-strip {
