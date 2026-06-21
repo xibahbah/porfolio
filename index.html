@@ -3,179 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Keith Gong – Portfolio</title>
+    <title>Xi (Keith) Gong - Data Science Portfolio</title>
+    <meta name="description" content="Xi (Keith) Gong is a UC San Diego data science student focused on analytics pipelines, KPI reporting, and computer vision research.">
     <link rel="stylesheet" href="style.css">
     <script type="module" src="global.js"></script>
-    <script type="module" src="index.js"></script>
-    <style>
-        .hero {
-            display: grid;
-            grid-template-columns: 1fr auto;
-            gap: 3em;
-            align-items: center;
-            padding-block: 3em 2em;
-        }
-
-        .hero h1 {
-            font-size: clamp(2.2rem, 7vw, 4rem);
-            margin: 0 0 0.4em;
-        }
-
-        .hero p {
-            font-size: 1.1em;
-            color: oklch(42% 0% 0);
-            max-width: 44ch;
-            margin: 0 0 1.5em;
-        }
-
-        .hero-photo img {
-            width: 200px;
-            border-radius: 0.75em;
-            display: block;
-            box-shadow: 0 4px 24px oklch(0% 0% 0 / 12%);
-        }
-
-        @media (max-width: 40em) {
-            .hero {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .hero-photo {
-                justify-self: center;
-                order: -1;
-            }
-
-            .hero p {
-                max-width: 100%;
-            }
-
-            .cta-group {
-                justify-content: center;
-            }
-        }
-
-        .cta-group {
-            display: flex;
-            gap: 0.75em;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 0.55em 1.3em;
-            border-radius: 0.4em;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95em;
-            transition: filter 0.15s;
-        }
-
-        .btn:hover {
-            filter: brightness(1.12);
-        }
-
-        .btn-dark {
-            background: oklch(18% 0% 0);
-            color: white;
-        }
-
-        .btn-accent {
-            background: var(--color-accent);
-            color: white;
-        }
-
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(18em, 1fr));
-            gap: 1.2em;
-            margin-block: 2.5em;
-        }
-
-        .card {
-            border: 1px solid oklch(87% 0% 0);
-            border-radius: 0.75em;
-            padding: 1.5em;
-            background: white;
-            display: flex;
-            flex-direction: column;
-            gap: 0.5em;
-        }
-
-        .card h2 {
-            margin: 0;
-            font-size: 1.05em;
-        }
-
-        .card p {
-            margin: 0;
-            font-size: 0.9em;
-            color: oklch(42% 0% 0);
-            flex: 1;
-        }
-
-        .card a {
-            color: var(--color-accent);
-            font-size: 0.9em;
-            font-weight: 600;
-            text-decoration: none;
-        }
-
-        .card a:hover {
-            text-decoration: underline;
-        }
-        footer {
-            margin-top: 3em;
-            padding-block: 1.25em;
-            border-top: 1px solid oklch(87% 0% 0);
-            text-align: center;
-            font-size: 0.85em;
-            color: oklch(55% 0% 0);
-        }
-    </style>
 </head>
-<body>
-    <section class="hero">
-        <div class="hero-text">
-            <h1>Keith Gong</h1>
-            <p>Data Science student at UC San Diego. I build data visualizations, machine learning models, and web projects.</p>
-            <div class="cta-group">
-                <a href="projects/" class="btn btn-dark">View Projects</a>
-                <a href="resume/" class="btn btn-accent">View Resume</a>
+<body class="home-page">
+    <main id="top">
+        <section class="hero-section">
+            <div class="hero-copy">
+                <p class="eyebrow">UC San Diego Data Science - Class of 2027</p>
+                <h1>Xi (Keith) Gong</h1>
+                <p class="hero-lede">I build data systems that turn messy information into clear decisions: Python ETL, SQL reporting, BI dashboards, and computer-vision analysis.</p>
+                <div class="hero-actions" aria-label="Primary links">
+                    <a class="button button-primary" href="mailto:xikeith0901@gmail.com">Email Keith</a>
+                    <a class="button button-secondary" href="resume/">View Resume</a>
+                </div>
             </div>
-        </div>
-        <div class="hero-photo">
-            <img src="images/selfie.png" alt="Keith Gong">
-        </div>
-    </section>
 
-    <section class="cards">
-        <div class="card">
-            <h2>About This Site</h2>
-            <p>A personal portfolio built for DSC 106 — featuring a projects gallery, contact form, and resume page.</p>
-        </div>
-        <div class="card">
-            <h2>My GitHub</h2>
-            <p>Browse my open-source work and repositories.</p>
-            <a href="https://github.com/xibahbah" target="_blank" rel="noopener noreferrer">github.com/xibahbah →</a>
-        </div>
-        <div class="card">
-            <h2>Get in Touch</h2>
-            <p>Have a question or want to collaborate? I'd love to hear from you.</p>
-            <a href="contact/">Contact me →</a>
-        </div>
-    </section>
+            <figure class="hero-portrait">
+                <img src="images/selfie.png" alt="Portrait of Xi Keith Gong">
+                <figcaption>Data science, analytics, and photography.</figcaption>
+            </figure>
+        </section>
 
-    <section>
-        <h2>Latest Projects</h2>
-        <div class="projects"></div>
-    </section>
+        <section class="signal-strip" aria-label="Profile highlights">
+            <div>
+                <span>Focus</span>
+                <strong>Analytics engineering</strong>
+            </div>
+            <div>
+                <span>Research</span>
+                <strong>YOLO object detection</strong>
+            </div>
+            <div>
+                <span>Toolkit</span>
+                <strong>Python, SQL, Tableau</strong>
+            </div>
+            <div>
+                <span>Location</span>
+                <strong>San Diego, CA</strong>
+            </div>
+        </section>
 
-    <section>
-        <h2>My GitHub Stats</h2>
-        <div id="profile-stats"></div>
-    </section>
+        <section class="content-section split-section" id="about">
+            <div class="section-kicker">Profile</div>
+            <div class="section-body">
+                <h2>Data science student with real analytics, finance, and research experience.</h2>
+                <p>At UC San Diego, I am studying data science with a photography minor. My work sits between technical implementation and business communication: building pipelines, validating data, designing dashboards, and translating model outputs into decisions a team can use.</p>
+            </div>
+        </section>
 
-    <footer>© 2026 Keith Gong</footer>
+        <section class="content-section" id="experience">
+            <div class="section-heading">
+                <p class="section-kicker">Experience</p>
+                <h2>Recent Work</h2>
+            </div>
+
+            <div class="timeline">
+                <article class="timeline-item">
+                    <div class="timeline-meta">
+                        <span>May 2024 - Jul 2024</span>
+                        <strong>Shanghai, China</strong>
+                    </div>
+                    <div class="timeline-copy">
+                        <h3>Amazon (Shanghai) International Trading Co., Ltd.</h3>
+                        <p class="role">Part-Time Assistant - Marketplace Analytics</p>
+                        <ul>
+                            <li>Built Python pipelines to ingest, clean, transform, and aggregate marketplace data from multiple internal sources.</li>
+                            <li>Implemented validation rules for invalid records, missing values, and recurring-run consistency.</li>
+                            <li>Engineered features across reviews, price, ratings, brand concentration, and category rankings.</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="timeline-item">
+                    <div class="timeline-meta">
+                        <span>Aug 2024 - Sep 2024</span>
+                        <strong>Hangzhou, China</strong>
+                    </div>
+                    <div class="timeline-copy">
+                        <h3>Bank of Communications Co., Ltd.</h3>
+                        <p class="role">Data Analyst Intern</p>
+                        <ul>
+                            <li>Built recurring KPI dashboards and performance reports for financial product metrics.</li>
+                            <li>Used SQL and Excel workflows to clean, join, and consolidate reporting datasets.</li>
+                            <li>Trained analysts on dashboard usage and translated business questions into measurable indicators.</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="timeline-item">
+                    <div class="timeline-meta">
+                        <span>Jan 2026 - Apr 2026</span>
+                        <strong>San Diego, CA</strong>
+                    </div>
+                    <div class="timeline-copy">
+                        <h3>Ditto</h3>
+                        <p class="role">Content Team Lead</p>
+                        <ul>
+                            <li>Led planning, execution, post-production, timelines, deliverables, and stakeholder reviews across campaigns.</li>
+                            <li>Standardized production workflows and documentation to improve handoffs and reduce review cycles.</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="content-section research-band" id="research">
+            <div>
+                <p class="section-kicker">Published Research</p>
+                <h2>Behavior and Efficiency Analysis of Asian Neighborhood Transportation Using Object Detection</h2>
+                <p class="role">Sole author, Applied and Computational Engineering, Vol. 66 - 2024</p>
+            </div>
+            <ul class="research-points">
+                <li>Designed an end-to-end Python computer-vision workflow for data collection, YOLO model setup, automated inference, and mobility-pattern analysis.</li>
+                <li>Structured the project with modular code, documentation, and reproducible execution on new datasets.</li>
+                <li>Converted technical model outputs into infrastructure and traffic-management recommendations.</li>
+            </ul>
+        </section>
+
+        <section class="content-section" id="skills">
+            <div class="section-heading">
+                <p class="section-kicker">Skills</p>
+                <h2>Technical Stack</h2>
+            </div>
+
+            <div class="skill-grid">
+                <article>
+                    <h3>Languages</h3>
+                    <p>Python, SQL, Java, C/C++, R, Bash</p>
+                </article>
+                <article>
+                    <h3>Data Systems</h3>
+                    <p>ETL pipelines, joins and aggregations, schema basics, pandas, NumPy, validation, cleaning</p>
+                </article>
+                <article>
+                    <h3>BI and Visualization</h3>
+                    <p>Tableau, matplotlib, dashboard design, KPI reporting, Excel pivots, lookups, formulas</p>
+                </article>
+                <article>
+                    <h3>Machine Learning</h3>
+                    <p>scikit-learn, PyTorch, YOLO, CNNs, classification, model evaluation</p>
+                </article>
+                <article>
+                    <h3>Cloud and DevOps</h3>
+                    <p>AWS S3 and EC2 basics, Git, CI/CD concepts, Bitbucket, scripting, task automation</p>
+                </article>
+                <article>
+                    <h3>Collaboration</h3>
+                    <p>Technical documentation, code review, agile workflows, pair programming, English and Mandarin</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="content-section split-section" id="education">
+            <div class="section-kicker">Education</div>
+            <div class="section-body">
+                <h2>University of California, San Diego</h2>
+                <p>B.S. in Data Science; Minor in Photography. Expected 2027.</p>
+                <p class="muted">Relevant coursework: scalable analytics, data management, data structures and algorithms, probabilistic modeling and machine learning, data mining, applied statistical data analysis, deep learning, and data visualization.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Xi (Keith) Gong</p>
+        <div>
+            <a href="mailto:xikeith0901@gmail.com">xikeith0901@gmail.com</a>
+            <a href="https://github.com/xibahbah" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://keithgong.com" target="_blank" rel="noopener noreferrer">keithgong.com</a>
+        </div>
+    </footer>
 </body>
 </html>

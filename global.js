@@ -1,78 +1,44 @@
-console.log("IT'S ALIVE!");
-
 export function $$(selector, context = document) {
   return Array.from(context.querySelectorAll(selector));
 }
 
-// ── Step 3: Auto nav ──────────────────────────────────────────────────────────
+const LOCAL_HOSTS = new Set(['localhost', '127.0.0.1', '::1', '']);
+const BASE_PATH = LOCAL_HOSTS.has(location.hostname)
+  ? '/'
+  : location.pathname.startsWith('/porfolio/')
+    ? '/porfolio/'
+    : '/';
 
-const BASE_PATH = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
-  ? "/"
-  : "/porfolio/";
-
-let pages = [
-  { url: '',              title: 'Home' },
-  { url: 'projects/',     title: 'Projects' },
-  { url: 'meta/',         title: 'Meta' },
-  { url: 'contact/',      title: 'Contact' },
-  { url: 'resume/',       title: 'Resume' },
-  { url: 'https://github.com/xibahbah', title: 'GitHub' },
+const navItems = [
+  { url: BASE_PATH, title: 'Main', className: 'nav-brand' },
+  { url: `${BASE_PATH}resume/`, title: 'Resume', className: 'nav-cta' },
 ];
 
-let nav = document.createElement('nav');
+const nav = document.createElement('nav');
+nav.className = 'site-nav';
+nav.setAttribute('aria-label', 'Primary');
 document.body.prepend(nav);
 
-for (let p of pages) {
-  let url = p.url;
-  let title = p.title;
+for (const item of navItems) {
+  const link = document.createElement('a');
+  link.href = item.url;
+  link.textContent = item.title;
 
-  if (!url.startsWith('http')) {
-    url = BASE_PATH + url;
+  if (item.className) {
+    link.className = item.className;
   }
 
-  let a = document.createElement('a');
-  a.href = url;
-  a.textContent = title;
+  const isInternal = link.host === location.host;
+  const normalizedPath = location.pathname.endsWith('/')
+    ? location.pathname
+    : `${location.pathname}/`;
 
-  a.classList.toggle('current', a.host === location.host && a.pathname === location.pathname);
-
-  if (a.host !== location.host) {
-    a.target = '_blank';
-    a.rel = 'noopener noreferrer';
+  if (isInternal && link.pathname === normalizedPath && !link.hash) {
+    link.classList.add('current');
   }
 
-  nav.append(a);
+  nav.append(link);
 }
-
-// ── Step 4: Dark mode ─────────────────────────────────────────────────────────
-
-nav.insertAdjacentHTML('beforeend', `
-<label class="color-scheme">
-  Theme:
-  <select>
-    <option value="light dark">Automatic</option>
-    <option value="light">Light</option>
-    <option value="dark">Dark</option>
-  </select>
-</label>`);
-
-const select = document.querySelector('.color-scheme select');
-
-function setColorScheme(colorScheme) {
-  document.documentElement.style.setProperty('color-scheme', colorScheme);
-  select.value = colorScheme;
-}
-
-select.addEventListener('input', function (event) {
-  setColorScheme(event.target.value);
-  localStorage.colorScheme = event.target.value;
-});
-
-if ('colorScheme' in localStorage) {
-  setColorScheme(localStorage.colorScheme);
-}
-
-// ── Lab 4: Exported utilities ─────────────────────────────────────────────────
 
 export async function fetchJSON(url) {
   try {
@@ -80,16 +46,21 @@ export async function fetchJSON(url) {
     if (!response.ok) {
       throw new Error(`Failed to fetch: ${response.statusText}`);
     }
-    const data = await response.json();
-    return data;
+    return await response.json();
   } catch (error) {
     console.error('Error fetching or parsing JSON data:', error);
+    return null;
   }
 }
 
 export function renderProjects(projects, containerElement, headingLevel = 'h2') {
+  if (!containerElement || !Array.isArray(projects)) {
+    return;
+  }
+
   containerElement.innerHTML = '';
-  for (let project of projects) {
+
+  for (const project of projects) {
     const article = document.createElement('article');
     const title = project.url
       ? `<a href="${project.url}" target="_blank" rel="noopener noreferrer">${project.title}</a>`
@@ -107,7 +78,7 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
         ${link}
       </div>
     `;
-    containerElement.appendChild(article);
+    containerElement.append(article);
   }
 }
 
@@ -115,15 +86,15 @@ export async function fetchGitHubData(username) {
   return fetchJSON(`https://api.github.com/users/${username}`);
 }
 
-// ── Step 5: Better contact form ───────────────────────────────────────────────
-
-let form = document.querySelector('form');
-form?.addEventListener('submit', function (event) {
+const form = document.querySelector('form');
+form?.addEventListener('submit', (event) => {
   event.preventDefault();
-  let data = new FormData(form);
-  let params = [];
-  for (let [name, value] of data) {
+  const data = new FormData(form);
+  const params = [];
+
+  for (const [name, value] of data) {
     params.push(`${name}=${encodeURIComponent(value)}`);
   }
-  location.href = form.action + '?' + params.join('&');
+
+  location.href = `${form.action}?${params.join('&')}`;
 });
