@@ -1,8 +1,11 @@
 {
+  "name": "keith-gong-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Xi (Keith) Gong's data science portfolio and native macOS distribution.",
   "scripts": {
-    "analyze": "elocuent -d . -o meta/loc.csv --spaces 2"
-  },
-  "devDependencies": {
-    "elocuent": "^0.0.4"
+    "release:macos": "./scripts/release/build-macos.sh",
+    "release:test": "./scripts/release/test-release.sh",
+    "release:verify": "./scripts/release/verify-release.sh"
   }
 }

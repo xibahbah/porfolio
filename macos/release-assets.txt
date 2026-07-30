@@ -1,0 +1,25 @@
+# Web resources copied into Contents/Resources/Web.
+# The release builder rejects absolute paths and parent traversal.
+index.html
+style.css
+global.js
+contact/index.html
+projects/index.html
+projects/projects.js
+resume/index.html
+lib/projects.js
+images/selfie-360.jpg
+images/selfie-720.jpg
+images/projects/bikewatching.png
+images/projects/birds.svg
+images/projects/climate.svg
+images/projects/covid.svg
+images/projects/enrollment.svg
+images/projects/fakenews.svg
+images/projects/housing.svg
+images/projects/nba.svg
+images/projects/pantry.svg
+images/projects/portfolio.svg
+images/projects/spotify.svg
+images/projects/twitter.svg
+images/projects/wildfire.svg

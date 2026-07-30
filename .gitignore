@@ -1,1 +1,53 @@
+# Dependencies and build output
 node_modules/
+build/
+dist/
+DerivedData/
+*.dSYM/
+
+# Secrets and private configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.cer
+*.mobileprovision
+
+# Local databases and application state
+*.db
+*.db-*
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+cookies/
+sessions/
+history/
+recent/
+imports/
+exports/
+cache/
+caches/
+thumbnails/
+previews/
+logs/
+tmp/
+temp/
+crash-reports/
+
+# Generated test and debug material
+coverage/
+test-results/
+screenshots/
+recordings/
+*.log
+*.map
+
+# Machine-local metadata
+.DS_Store
+*.alias
+* alias
+.idea/
+.vscode/
